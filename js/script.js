@@ -27,18 +27,18 @@ var main = function(){
    });
 
 
-   $('.btn').keyup(function() {
-      var post = $('.textBox').val();
+   $('.btn').click(function() {
+      var post = $('#textBox').val();
       $('<li>').text(post).prependTo('.posts');
-      $('.textBox').val('');
-      $('.label').text('140');
+      $('#textBox').val('');
+      $('#label').text('140');
       $('.btn').addClass('disabled');
    });
 
-   $('.textBox').change(function() {
+   $('#textBox').keyup(function() {
       var postLength = $(this).val().length;
       var charactersLeft = 140 - postLength;
-      $('.label').text(charactersLeft);
+      $('#label').text(charactersLeft);
 
       if(charactersLeft < 0 || charactersLeft == 140) {
          $('.btn').addClass('disabled'); 
@@ -48,10 +48,11 @@ var main = function(){
       }
    });
 
-$('#btn').addClass('disabled');
+$('.btn').addClass('disabled');
 
 }
 
 $(document).ready(main);
+
 
 
