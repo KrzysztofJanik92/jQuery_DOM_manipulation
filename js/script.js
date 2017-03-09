@@ -35,7 +35,7 @@ var main = function(){
       $('.btn').addClass('disabled');
    });
 
-   $('.textBox').keyup(function() {
+   $('.textBox').change(function() {
       var postLength = $(this).val().length;
       var charactersLeft = 140 - postLength;
       $('.label').text(charactersLeft);
