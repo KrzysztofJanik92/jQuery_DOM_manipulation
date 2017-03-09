@@ -27,7 +27,7 @@ var main = function(){
    });
 
 
-   $('#btn').click(function() {
+   $('#btn').keyup(function() {
       var post = $('.textBox').val();
       $('<li>').text(post).prependTo('.posts');
       $('.textBox').val('');
