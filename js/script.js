@@ -1,47 +1,48 @@
 var slideMenu = function() {
   /* Push the body and the nav over by 285px over */
-  $('.icon-menu').click(function() {
-    $('.menu').animate({
+  $('#icon-menu').click(function() {
+    $('#menu').animate({
       left: "0px"
-    }, 200);
+    }, 400);
 
     $('body').animate({
       left: "200px"
-    }, 200);
-      
-    $('.m2').addClass('selected');
+    }, 400);
+    
+     $("#m2").hide(400);  
+     
   });
 
   /* Then push them back */
-  $('.icon-close').click(function() {
-    $('.menu').animate({
+  $('#icon-close').click(function() {
+    $('#menu').animate({
       left: "-200px"
-    }, 200);
+    }, 400);
 
     $('body').animate({
       left: "0px"
-    }, 200);
+    }, 400);
       
-    $('.m2').removeClass('selected');
+    $("#m2").show(400);
   });
 };
 
 
 $(document).ready(slideMenu);
 
-var main = function() {
+var postBox = function() {
     $('.btn').click(function() {
-        var post = $('.status-box').val();
+        var post = $('.textBox').val();
         $('<li>').text(post).prependTo('.posts');
-        $('.status-box').val('');
-        $('.counter').text('140');
+        $('.textBox').val('');
+        $('.label').text('140');
         $('.btn').addClass('disabled');
         });
         
-    $('.status-box').keyup(function() {
+    $('.textBox').keyup(function() {
       var postLength = $(this).val().length;
       var charactersLeft = 140 - postLength;
-    $('.counter').text(charactersLeft);
+    $('.label').text(charactersLeft);
     
     if(charactersLeft < 0) {
       $('.btn').addClass('disabled'); 
@@ -58,4 +59,5 @@ var main = function() {
     
 }
     
-$(document).ready(main);
+$(document).ready(postBox);
+
