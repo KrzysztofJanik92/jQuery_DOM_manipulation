@@ -27,12 +27,12 @@ var main = function(){
    });
 
 
-   $('#btn').keyup(function() {
+   $('.btn').keyup(function() {
       var post = $('.textBox').val();
       $('<li>').text(post).prependTo('.posts');
       $('.textBox').val('');
       $('.label').text('140');
-      $('#btn').addClass('disabled');
+      $('.btn').addClass('disabled');
    });
 
    $('.textBox').change(function() {
@@ -41,10 +41,10 @@ var main = function(){
       $('.label').text(charactersLeft);
 
       if(charactersLeft < 0 || charactersLeft == 140) {
-         $('#btn').addClass('disabled'); 
+         $('.btn').addClass('disabled'); 
       }
       else {
-         $('#btn').removeClass('disabled');
+         $('.btn').removeClass('disabled');
       }
    });
 
