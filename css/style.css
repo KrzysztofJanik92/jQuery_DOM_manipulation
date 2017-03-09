@@ -77,6 +77,10 @@ body {
    width: 20%;
 }
 
+.selected{
+   box-shadow: 10px 10px 25px black;
+}
+
 .m1 {
    font-weight: bold;
    color: white;
