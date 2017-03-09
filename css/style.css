@@ -111,10 +111,6 @@ body {
    margin-right: 10px;
 }
 
-#textBox{
-   width: auto;
-}
-
 .btn{
    background-color: green;
    padding: 2px 10px;
@@ -124,12 +120,12 @@ body {
    border-radius: 3px;
 }
 
-.textBox {
+#textBox {
    width: 100%;
    max-width: 100%;
 }
 
-.label {
+#label {
    display: inline;
 }
 
@@ -166,4 +162,5 @@ body {
    text-align: center;
    font-family: Raleway, sans-serif;
 }
+
 
