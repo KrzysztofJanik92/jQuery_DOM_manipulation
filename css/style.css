@@ -58,11 +58,6 @@ body {
    text-decoration: none;
 }
 
-#icon-close {
-   cursor: pointer;
-   padding-left: 30px;
-   padding-top: 30px;
-}
 
 #icon-menu {
    color: black;
@@ -75,20 +70,6 @@ body {
    text-decoration: none;
    text-transform: uppercase;
    width: 20%;
-}
-
-#m1 {
-   font-weight: bold;
-   color: white;
-   float: right;
-   font-size: 25px;
-   margin: 10px;
-   font-family: Raleway, sans-serif;
-   border-radius: 5px;
-}
-
-#m1:hover{
-   color: red;
 }
 
 #m2 {
