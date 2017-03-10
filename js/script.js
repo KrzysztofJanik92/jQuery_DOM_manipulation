@@ -18,19 +18,17 @@ var main = function(){
 
 
 		flag = true;		
-	 }
-	 else
-	 {
-		   $('#menu').animate({
-			left: "-200px"
-			}, 400);
+	 }else{
+	   $('#menu').animate({
+		left: "-200px"
+		}, 400);
 
-			$('body').animate({
-			left: "0px"
-			}, 400);
+		$('body').animate({
+		left: "0px"
+		}, 400);
 
-			
-			flag = false;
+
+		flag = false;
 	 }
    });
 
