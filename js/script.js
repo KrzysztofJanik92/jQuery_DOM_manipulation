@@ -1,31 +1,38 @@
+
+
 var main = function(){
 /* Push the body and the nav over by 285px over */
+   var flag = false;
+   
    $('#icon-menu').click(function() {
-      $('#menu').animate({
-         left: "0px"
-      }, 400);
+      
+       if(flag == false){
+	  
+		$('#menu').animate({
+			left: "0px"
+		}, 400);
 
-      $('body').animate({
-         left: "200px"
-      }, 400);
+		$('body').animate({
+			left: "200px"
+		}, 400);
 
-      $("#m2").hide(400);  
 
+		flag = true;		
+	 }
+	 else
+	 {
+		   $('#menu').animate({
+			left: "-200px"
+			}, 400);
+
+			$('body').animate({
+			left: "0px"
+			}, 400);
+
+			
+			flag = false;
+	 }
    });
-
-/* Then push them back */
-   $('#icon-close').click(function() {
-      $('#menu').animate({
-         left: "-200px"
-      }, 400);
-
-      $('body').animate({
-         left: "0px"
-      }, 400);
-
-      $("#m2").show(400);
-   });
-
 
    $('.btn').click(function() {
       var post = $('#textBox').val();
@@ -53,6 +60,5 @@ $('.btn').addClass('disabled');
 }
 
 $(document).ready(main);
-
 
 
