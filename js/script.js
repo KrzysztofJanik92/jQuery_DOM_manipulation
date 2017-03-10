@@ -2,11 +2,11 @@
 
 var main = function(){
 /* Push the body and the nav over by 285px over */
-   var flag = false;
+   var open = false;
    
    $('#icon-menu').click(function() {
       
-       if(flag == false){
+       if(open == false){
 	  
 		$('#menu').animate({
 			left: "0px"
@@ -17,7 +17,7 @@ var main = function(){
 		}, 400);
 
 
-		flag = true;		
+		open = true;		
 	 }else{
 	   $('#menu').animate({
 		left: "-200px"
@@ -28,7 +28,7 @@ var main = function(){
 		}, 400);
 
 
-		flag = false;
+		open = false;
 	 }
    });
 
@@ -40,7 +40,7 @@ var main = function(){
       $('.btn').addClass('disabled');
    });
 
-   $('#textBox').change(function() {
+   $('#textBox').keyup(function() {
       var postLength = $(this).val().length;
       var charactersLeft = 140 - postLength;
       $('#label').text(charactersLeft);
